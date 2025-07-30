@@ -5,7 +5,7 @@ const PORT = process.env.PORT || 3000;
 
 // Habilitar CORS para tu sitio Wix
 app.use(cors({
-  origin: 'https://walterwaymann-wixsite-com.filesusr.com'
+  origin: 'https://walterwaymann.wixsite.com'
 }));
 
 app.get('https://dobo-api.onrender.com/api/products', (req, res) => {
