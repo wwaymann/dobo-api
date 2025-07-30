@@ -8,7 +8,7 @@ app.use(cors({
   origin: 'https://walterwaymann-wixsite-com.filesusr.com'
 }));
 
-app.get('/api/products', (req, res) => {
+app.get('https://dobo-api.onrender.com/api/products', (req, res) => {
   res.json([
     { id: 1, nombre: "Maceta DOBO 1", precio: "$5.000" },
     { id: 2, nombre: "Maceta DOBO 2", precio: "$6.500" },
