@@ -23,19 +23,19 @@ app.get('/api/products', (req, res) => {
       _id: "1",
       nombre: "Maceta DOBO 1",
       precio: "$5.000",
-      imagen: "https://via.placeholder.com/300x300?text=Maceta1"
+      imagen: "https://placehold.co/300x300?text=Maceta+DOBO+1"
     },
     {
       _id: "2",
       nombre: "Maceta DOBO 2",
       precio: "$6.500",
-      imagen: "https://via.placeholder.com/300x300?text=Maceta2"
+      imagen: "https://placehold.co/300x300?text=Maceta+DOBO+2"
     },
     {
       _id: "3",
       nombre: "Edición Especial",
       precio: "$7.200",
-      imagen: "https://via.placeholder.com/300x300?text=Maceta3"
+      imagen: "https://placehold.co/300x300?text=Edición+Especial"
     }
   ];
 
