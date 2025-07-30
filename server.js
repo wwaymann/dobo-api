@@ -3,13 +3,21 @@ const cors = require('cors');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// Habilitar CORS para tu sitio Wix
+// Habilita CORS para tu sitio Wix
 app.use(cors({
-  origin:   'https://walterwaymann.wixsite.com',
+  origin: [
+    'https://walterwaymann.wixsite.com',
     'https://walterwaymann-wixsite-com.filesusr.com'
+  ]
 }));
 
-app.get('https://dobo-api.onrender.com/api/products', (req, res) => {
+// Ruta raíz opcional
+app.get('/', (req, res) => {
+  res.send('✅ API DOBO funcionando correctamente. Revisa /api/products');
+});
+
+// ✅ Ruta para los productos
+app.get('/api/products', (req, res) => {
   res.json([
     { id: 1, nombre: "Maceta DOBO 1", precio: "$5.000" },
     { id: 2, nombre: "Maceta DOBO 2", precio: "$6.500" },
