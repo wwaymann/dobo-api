@@ -21,29 +21,27 @@ app.get('/api/products', (req, res) => {
   const productos = [
     {
       _id: "1",
-      id: 1,
       nombre: "Maceta DOBO 1",
       precio: "$5.000",
-      imagen: "https://static.wixstatic.com/media/xxx1.jpg"
+      imagen: "https://via.placeholder.com/300x300?text=Maceta+1"
     },
     {
       _id: "2",
-      id: 2,
       nombre: "Maceta DOBO 2",
       precio: "$6.500",
-      imagen: "https://static.wixstatic.com/media/xxx2.jpg"
+      imagen: "https://via.placeholder.com/300x300?text=Maceta+2"
     },
     {
       _id: "3",
-      id: 3,
       nombre: "Edición Especial",
       precio: "$7.200",
-      imagen: "https://static.wixstatic.com/media/xxx3.jpg"
+      imagen: "https://via.placeholder.com/300x300?text=Maceta+3"
     }
   ];
 
   res.json(productos);
 });
+
 
 
 app.listen(PORT, () => {
