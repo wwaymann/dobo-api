@@ -3,7 +3,7 @@ const cors = require('cors');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// Habilita CORS para tu sitio Wix
+// Habilita CORS para ambos orígenes posibles de Wix
 app.use(cors({
   origin: [
     'https://walterwaymann.wixsite.com',
@@ -11,21 +11,24 @@ app.use(cors({
   ]
 }));
 
-// Ruta raíz opcional
+// Ruta raíz (opcional)
 app.get('/', (req, res) => {
-  res.send('✅ API DOBO funcionando correctamente. Revisa /api/products');
+  res.send('✅ API DOBO funcionando correctamente. Visita /api/products');
 });
 
-// ✅ Ruta para los productos
+// Ruta que entrega los productos
 app.get('/api/products', (req, res) => {
-  res.json([
-    { id: 1, nombre: "Maceta DOBO 1", precio: "$5.000" },
-    { id: 2, nombre: "Maceta DOBO 2", precio: "$6.500" },
-    { id: 3, nombre: "Edición Especial", precio: "$7.200" }
-  ]);
+  const productos = [
+    { _id: "1", id: 1, nombre: "Maceta DOBO 1", precio: "$5.000" },
+    { _id: "2", id: 2, nombre: "Maceta DOBO 2", precio: "$6.500" },
+    { _id: "3", id: 3, nombre: "Edición Especial", precio: "$7.200" }
+  ];
+
+  res.json(productos);
 });
 
 app.listen(PORT, () => {
-  console.log(`Servidor corriendo en puerto ${PORT}`);
+  console.log(`Servidor API DOBO corriendo en puerto ${PORT}`);
 });
+
 
