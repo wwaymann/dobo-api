@@ -19,13 +19,32 @@ app.get('/', (req, res) => {
 // Ruta que entrega los productos
 app.get('/api/products', (req, res) => {
   const productos = [
-    { _id: "1", id: 1, nombre: "Maceta DOBO 1", precio: "$5.000" },
-    { _id: "2", id: 2, nombre: "Maceta DOBO 2", precio: "$6.500" },
-    { _id: "3", id: 3, nombre: "Edición Especial", precio: "$7.200" }
+    {
+      _id: "1",
+      id: 1,
+      nombre: "Maceta DOBO 1",
+      precio: "$5.000",
+      imagen: "https://static.wixstatic.com/media/xxx1.jpg"
+    },
+    {
+      _id: "2",
+      id: 2,
+      nombre: "Maceta DOBO 2",
+      precio: "$6.500",
+      imagen: "https://static.wixstatic.com/media/xxx2.jpg"
+    },
+    {
+      _id: "3",
+      id: 3,
+      nombre: "Edición Especial",
+      precio: "$7.200",
+      imagen: "https://static.wixstatic.com/media/xxx3.jpg"
+    }
   ];
 
   res.json(productos);
 });
+
 
 app.listen(PORT, () => {
   console.log(`Servidor API DOBO corriendo en puerto ${PORT}`);
